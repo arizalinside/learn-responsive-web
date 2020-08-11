@@ -1,0 +1,459 @@
+/* BACKGROUND ============================================================= */
+body {
+  /* nama warna = red | hexadecimal = #ff0000 | rgb = rgb(255,0,0) */
+  /* mengatur warna pada background */
+  background-color: #eaeaea;
+  /* mengatur gambar pada background */
+  /* background-image: url(gradient.png); */
+  /* top, center, bottom && left, right, center | 0 = horizontalnya 0 = verticalnya */
+  /* mengatur posisi gambar pada background */
+  /* background-position: center center; */
+  /* repeat(default) | repeat-x | repeat-y | no-repeat */
+  /* mengatur jenis pengulangan gambar pada background */
+  /* background-repeat: no-repeat; */
+  /* mengatur lebar yang bisa disesuaikan dengan width heightnya */
+  /* background-size: cover; */
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+}
+/* FONT & TEXT ============================================================= */
+@font-face {
+  font-family: YellowTail;
+  src: url("./Yellowtail-Regular.ttf");
+}
+.box-1 {
+  border: 3px solid black;
+  padding: 10px;
+}
+.box-1 h1 {
+  font-family: YellowTail;
+}
+p.font {
+  /* arial dan helvetica = nama font, sans-serif = generic family(font yang tidak memiliki kaki). jika fontnya lebih dari satu maka font yang akan dicari terlebih dahulu font yang ada disebelah kiri jika tidak ada pindah ke kanan sampai habis */
+  font-family: Arial, Helvetica, sans-serif; /* untuk mengatur jenis font yang akan digunakan */
+  /* ukurannya bisa px/pixel | % | em */
+  font-size: 20px; /* untuk mengatur ukuran font */
+  /* lighter | normal | 100 - 900 | bold | bolder */
+  font-weight: bold; /* untuk mengatur ketebalan font */
+  /* normal | small-caps */
+  font-variant: small-caps;
+  /* normal | italic | oblique */
+  font-style: italic; /* untuk mengubah font menjadi cetak miring */
+  /* normal | px | em */
+  line-height: 1em; /* untuk mengatur spasi antar baris */
+}
+p.text {
+  /* nama warna = red | hexadecimal = #ff0000 | rgb = rgb(255,0,0) */
+  color: brown; /* mengatur warna pada tulisan */
+  /* left | right | center | justify */
+  text-align: center; /* mengatur format paragraf / teks */
+  /* px | % */
+  text-indent: 2px; /* untuk mengatur jarak paragraf */
+  /* none | underline | overline | linethrough */
+  text-decoration: none; /* mengatur dekorasi pada teks */
+  /* none | lowercase | uppercase | capitalize */
+  text-transform: lowercase; /* mengubah jenis huruf menjadi huruf besar, kecil / kapital */
+  /* px | normal */
+  letter-spacing: 1px; /* mengatur spasi antar huruf */
+  /* px | normal */
+  word-spacing: 2px; /* mengatur spasi antar kata */
+}
+/* DIMENSI & OVERFLOW ============================================================= */
+.box-2 {
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+div.dimensi-kotak-1 {
+  /* width = lebar */
+  /* height = tinggi */
+  /* px = satuan absolute | % = nilai yang relative | in,cm,mm,pt,pc = satuan di dunia nyata */
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+}
+
+div.dimensi-kotak-2 {
+  width: 100%;
+  height: 50px;
+  background-color: lightcoral;
+}
+
+div.text-box {
+  width: 100%;
+  height: 100px;
+  background-color: lightskyblue;
+  /* OVERFLOW = visible(default) | hidden = disembunyikan yang lebihnya | scroll | auto */
+  overflow: auto;
+}
+/* DISPLAY ============================================================= */
+.box-3 {
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.box-3 ul.display li {
+  /* display mengatur perilaku kotak  */
+  /* inline = elemen secara default tidak menambahkan baris baru, lebar dan tinggi sebesar konten yang ada didalamnya, tidak dapat mengatur width dan height, margin dan padding hanya mempengaruhi elemen secara horizontal tidak vertikal
+  (span,a,b,i,u,button,input,textarea,select,label)  */
+  /* inline-block = bisa mengatur width dan height */
+  /* block = elemen secara default menambahkan baris baru, dapat mengatur width dan height (h1-h6, ul, p, div, hr) */
+  /* none = menghilangkan elemen */
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: lime;
+}
+/* BOX MODEL ============================================================= */
+.box-4 {
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+div.bm-kotak-1 {
+  width: 50px;
+  height: 50px;
+  background-color: lightgray;
+  /* margin-top: 30px;
+  margin-left: 100px;
+  margin-right: 50px;
+  margin-bottom: 20px; */
+  /* margin bisa diberi nilai negative */
+  /* value 1 = semua */
+  /* value 1 = atas,bawah | value 2 = kiri,kanan */
+  /* value 1 = atas | value 2 = kiri,kanan | value 3 = bawah */
+  /* value 1 = atas | value 2 = kanan | value 3 = bawah | value 4 = kiri */
+  /* margin: 50px 100px; */
+  margin: 1px;
+  /* border juga mengubah ukuran box */
+  /* value 1 = tebalnya | value 2 = stylenya(solid, dotted, dashed double) | value 3 = warnanya */
+  border: 1px solid black;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+/* PSEUDO CLASS & ELEMENT ============================================================= */
+.box-5 {
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 5px;
+  color: black;
+}
+
+.box-5 a:hover {
+  color: lime;
+}
+
+.box-5 a:active {
+  font-style: italic;
+}
+
+.box-5 a:visited {
+  color: red;
+}
+
+/* kita bisa menambahkan sesuatu setelah dan sebelum style yang akan di jalankan */
+.box-5 .pe::after {
+  /* yang bisa diisi didalam content = string/tulisan/icon | image/urlgambar *tidak bisa diresize | kosong | counter */
+  content: " World !";
+}
+
+.box-5 .pe::before {
+  content: "Hi, ";
+}
+/* POSITION ============================================================= */
+/* memungkinkan menggeser element tanpa membuat prubahan pada element lain */
+/* static(default) | relative(dapat menggunakan properti : top, left, right ,bottom | posisi elementnya tetap ada) | absolute(dapat menggunakan properti : top, left, right ,bottom | posisi elementnya digantikan elemen lain) | fixed (bisa digunakan untuk topbar jadi ketika di scroll akan tetap mengikuti) */
+
+.box-6 {
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 5px;
+  /* position: relative; */
+  /* height: 5000px; */
+}
+
+.satu,
+.dua,
+.tiga {
+  width: 100px;
+  height: 100px;
+}
+
+.satu {
+  background-color: limegreen;
+}
+.dua {
+  background-color: salmon;
+  /* position: relative;
+  top: 10px;
+  left: 10px; */
+  /* position: absolute;
+  top: 0; */
+}
+.tiga {
+  background-color: lightskyblue;
+}
+.empat {
+  height: 40px;
+  width: 100%;
+  background-color: violet;
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+}
+.lima {
+  height: 40px;
+  width: 100%;
+  background-color: lightcoral;
+  /* position: sticky;
+  top: 40px; */
+}
+/* FLOAT ============================================================= */
+.box-7 {
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+/* penggunaan float bisa dilakukan untuk */
+/* 2. text wraping = membuat text mengelilingi gambar / elemen lain */
+/* 3. image gallery = membuat serangkaian gambar menjadi galeri */
+/* 4. multi column layout = membuat halaman memiliki beberapa kolom */
+
+.f-container {
+  width: 550px;
+  margin: 10px auto;
+  border: 5px solid #333;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+}
+
+.f-container header {
+  background-color: skyblue;
+  padding: 40px 0;
+}
+
+.f-container nav {
+  background-color: lightcoral;
+  padding: 20px 0;
+}
+
+.f-content::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.f-main {
+  float: left;
+  width: 60%;
+}
+
+.f-main section {
+  background-color: lightgreen;
+  padding: 30px 0;
+}
+
+.f-main article {
+  background-color: lightsalmon;
+  padding: 60px 0;
+}
+
+.f-container aside {
+  background-color: lightyellow;
+  padding: 100px;
+  float: right;
+  width: 40%;
+  box-sizing: border-box;
+}
+
+.f-container footer {
+  background-color: lightseagreen;
+  padding: 40px 0;
+}
+/* FLEX ============================================================= */
+.box-8 {
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.fl-container {
+  width: 550px;
+  margin: 10px auto;
+  border: 5px solid #333;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+}
+
+.fl-container header {
+  background-color: skyblue;
+  padding: 40px 0;
+}
+
+.fl-container nav {
+  background-color: lightcoral;
+  padding: 20px 0;
+}
+
+.fl-content {
+  display: flex;
+}
+
+.fl-main {
+  flex: 1.5;
+}
+
+.fl-main section {
+  background-color: lightgreen;
+  padding: 30px 0;
+}
+
+.fl-main article {
+  background-color: lightsalmon;
+  padding: 60px 0;
+}
+
+.fl-container aside {
+  flex: 1;
+  background-color: lightyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fl-container footer {
+  background-color: lightseagreen;
+  padding: 40px 0;
+}
+/* GRID ============================================================= */
+.box-9 {
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.g-container {
+  width: 550px;
+  margin: 10px auto;
+  border: 5px solid #333;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+  /* grid container = element pembungkus grid, didefinisan dengan menulis (display: grid) */
+  display: grid;
+  /* bisa menggunakan = <nama-area> | none | '.' <*/
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "section aside"
+    "article aside"
+    "footer footer";
+  /* grid-template-columns | rows = untuk mendefinisikan kolom / baris dengan menuliskan nilai yang dipisahkan oleh spasi. nilai merepresentasikan ukuran grid track dan spasi mereprentasikan grid line   */
+  /* nilai bisa berupa = px | % | auto | fr (fraction/pecahan) */
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 0.3fr 1fr 1fr 0.5fr;
+}
+
+.g-container header {
+  grid-area: header;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.g-container nav {
+  grid-area: nav;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.g-container section {
+  grid-area: section;
+  background-color: lightgreen;
+  padding: 30px 0;
+}
+
+.g-container article {
+  grid-area: article;
+  background-color: lightsalmon;
+  padding: 60px 0;
+}
+
+.g-container aside {
+  grid-area: aside;
+  background-color: lightyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.g-container footer {
+  grid-area: footer;
+  background-color: lightseagreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MEDIA QUERIES ============================================================= */
+
+@media (max-width: 600px) {
+  .container {
+    width: 400px;
+  }
+
+  .f-container {
+    width: 350px;
+  }
+
+  .f-main section {
+    padding: 20px 0;
+  }
+
+  .f-main article {
+    padding: 20px 0;
+  }
+
+  .f-container aside {
+    padding: 50px;
+  }
+
+  .fl-container {
+    width: 350px;
+  }
+  .fl-content {
+    display: block;
+  }
+  .fl-container aside {
+    padding: 50px;
+  }
+
+  .g-container {
+    width: 350px;
+    grid-template-areas:
+      "header"
+      "nav"
+      "section"
+      "article"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.3fr 1fr 1fr 1fr 0.5fr;
+  }
+}
