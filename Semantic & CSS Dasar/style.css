@@ -1,0 +1,115 @@
+/* selector h1 = sebuah bagian dari css yang digunakan untuk memilih dan memanipulasi bagian yang spesifik di html, tidak hanya tag html kita juga bisa membuat sendiri selectornya menggunakan id, class. semakin kompleks struktur htmlnya semakin kompleks juga selectornya */
+
+/* property(350++) & value = */
+/* h1 {
+  font-family: "Courier New";
+  font-size: 30px;
+  color: blue;
+  text-align: center;
+} */
+
+p.font {
+  /* arial dan helvetica = nama font, sans-serif = generic family(font yang tidak memiliki kaki). jika fontnya lebih dari satu maka font yang akan dicari terlebih dahulu font yang ada disebelah kiri jika tidak ada pindah ke kanan sampai habis */
+  font-family: Arial, Helvetica, sans-serif; /* untuk mengatur jenis font yang akan digunakan */
+  /* ukurannya bisa px/pixel | % | em */
+  font-size: 30px; /* untuk mengatur ukuran font */
+  /* lighter | normal | 100 - 900 | bold | bolder */
+  font-weight: bold; /* untuk mengatur ketebalan font */
+  /* normal | small-caps */
+  font-variant: small-caps;
+  /* normal | italic | oblique */
+  font-style: italic; /* untuk mengubah font menjadi cetak miring */
+  /* normal | px | em */
+  line-height: 10mm; /* untuk mengatur spasi antar baris */
+}
+
+p.text {
+  /* nama warna = red | hexadecimal = #ff0000 | rgb = rgb(255,0,0) */
+  color: brown; /* mengatur warna pada tulisan */
+  /* left | right | center | justify */
+  text-align: center; /* mengatur format paragraf / teks */
+  /* px | % */
+  text-indent: 2px; /* untuk mengatur jarak paragraf */
+  /* none | underline | overline | linethrough */
+  text-decoration: none; /* mengatur dekorasi pada teks */
+  /* none | lowercase | uppercase | capitalize */
+  text-transform: lowercase; /* mengubah jenis huruf menjadi huruf besar, kecil / kapital */
+  /* px | normal */
+  letter-spacing: 1px; /* mengatur spasi antar huruf */
+  /* px | normal */
+  word-spacing: 2px; /* mengatur spasi antar kata */
+}
+
+body {
+  /* nama warna = red | hexadecimal = #ff0000 | rgb = rgb(255,0,0) */
+  /* background-color: blue; mengatur warna pada background */
+  background-image: url(./1.jpg); /* mengatur gambar pada background */
+  /* top, center, bottom && left, right, center | 0 = horizontalnya 0 = verticalnya */
+  /* background-position: top center; mengatur posisi gambar pada background */
+  /* repeat | repeat-x | repeat-y | no-repeat */
+  /* background-repeat: no-repeat; mengatur jenis pengulangan gambar pada background */
+  /* background-size: cover; mengatur lebar yang bisa disesuaikan dengan width heightnya */
+}
+
+/* id */
+/* 1 elemen hanya boleh memiliki 1 id */
+/* 1 halaman hanya boleh memiliki 1 elemen dengan id tersebut */
+/* digunakan juga untuk javascript */
+/* sebaiknya tidak digunakan untuk CSS (lebih baik menggunakan class) */
+/* elemen HTML memiliki beban = 1 | class = 10 | id = 100 | inline = 1000 */
+#selector {
+  color: orange;
+}
+
+/* Pseudo Class */
+.pseudo {
+  color: orange;
+}
+.pseudo:hover {
+  color: blue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+.pseudo:active {
+  font-style: italic;
+}
+.pseudo:visited {
+  color: red;
+}
+
+/* Pseudo Element */
+/* yang bisa diisi didalam content = string/tulisan/icon | image/urlgambar *tidak bisa diresize | kosong | counter */
+div.psudo-element-1::after {
+  content: " World !";
+}
+
+div.psudo-element-1::before {
+  content: "Hi, ";
+}
+
+div.psudo-element-2 {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  position: relative;
+  margin: 20px auto;
+}
+
+div.psudo-element-2::before,
+div.psudo-element-2::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+div.psudo-element-2::before {
+  top: -15px;
+  left: -15px;
+  background-color: salmon;
+}
+div.psudo-element-2::after {
+  right: -15px;
+  bottom: -15px;
+  background-color: lightgreen;
+}
